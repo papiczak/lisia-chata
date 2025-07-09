@@ -1,173 +1,199 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lisia Chata – Discord</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Nunito', sans-serif;
-            background: #fff8f0;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lisia Chata – Discord</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: #fffaf5;
+      color: #333;
+    }
 
-        /* Pasek boczny */
-        #sidebar {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #ff7f50;
-            overflow-x: hidden;
-            transition: 0.3s;
-            padding-top: 60px;
-            z-index: 1000;
-        }
+    /* Pasek boczny */
+    #sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, #ff7f50, #ff9966);
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
 
-        #sidebar a {
-            padding: 12px 24px;
-            text-decoration: none;
-            font-size: 1.2em;
-            color: white;
-            display: block;
-            transition: 0.3s;
-        }
+    #sidebar a {
+      padding: 14px 30px;
+      text-decoration: none;
+      font-size: 1.2em;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
 
-        #sidebar a:hover {
-            background-color: #e66a3a;
-        }
+    #sidebar a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
 
-        #sidebarCloseBtn {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 30px;
-            color: white;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
+    #sidebarCloseBtn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
 
-        /* Przycisk otwierania */
-        #openSidebarBtn {
-            font-size: 1.5em;
-            background: #ff7f50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1001;
-            border-radius: 8px;
-        }
+    /* Przycisk otwierania */
+    #openSidebarBtn {
+      font-size: 1.5em;
+      background: #ff7f50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
 
-        header {
-            background: #ff7f50;
-            color: white;
-            padding: 20px 10px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-        }
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .section-title {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: #ff7f50;
-        }
-        .btn {
-            display: inline-block;
-            background: #ff7f50;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #e66a3a;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #ff7f50;
-            color: white;
-            margin-top: 60px;
-        }
-    </style>
+    header {
+      background: linear-gradient(90deg, #ff7f50, #ff9966);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3.2em;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-title {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #ff7f50;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff7f50, #ff9966);
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:hover {
+      background: #e66a3a;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #ff7f50;
+      color: white;
+      margin-top: 60px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Przycisk otwierania -->
 <button id="openSidebarBtn" onclick="openSidebar()">☰ Menu</button>
 
-<!-- Pasek boczny -->
 <div id="sidebar">
-    <button id="sidebarCloseBtn" onclick="closeSidebar()">&times;</button>
-    <a <a href="administracja.html">🛠️ Administracja</a>
-    <a href="#oferta">🎮 Co oferujemy?</a>
-    <a href="#dolacz">💬 Dołącz do nas!</a>
+  <button id="sidebarCloseBtn" onclick="closeSidebar()">&times;</button>
+  <a href="administracja.html">🛠️ Administracja</a>
+  <a href="#oferta">🎮 Co oferujemy?</a>
+  <a href="#dolacz">💬 Dołącz do nas!</a>
 </div>
 
 <header>
-    <h1>Lisia Chata</h1>
-    <p>Twoje przytulne miejsce na Discordzie 🦊</p>
+  <h1>Lisia Chata</h1>
+  <p>Twoje przytulne miejsce na Discordzie 🦊</p>
 </header>
 
 <section id="o-nas">
-    <h2 class="section-title">🌟 O nas</h2>
-    <p>
-        Lisia Chata to miejsce stworzone dla ludzi, którzy szukają spokojnego, przyjaznego i aktywnego serwera Discord.
-        Znajdziesz tu rozmowy o wszystkim i niczym, ciekawe kanały tematyczne, a także serdeczną społeczność!
-    </p>
+  <h2 class="section-title">🌟 O nas</h2>
+  <p>
+    Lisia Chata to miejsce stworzone dla ludzi, którzy szukają spokojnego, przyjaznego i aktywnego serwera Discord.
+    Znajdziesz tu rozmowy o wszystkim i niczym, ciekawe kanały tematyczne, a także serdeczną społeczność!
+  </p>
 </section>
 
 <section id="oferta">
-    <h2 class="section-title">🎮 Co oferujemy?</h2>
-    <ul>
-        <li>➡️ Kanały tekstowe i głosowe</li>
-        <li>➡️ System rang i boty urozmaicające zabawę</li>
-        <li>➡️ Miejsce na dzielenie się sztuką, muzyką i memami</li>
-        <li>➡️ Przyjazna moderacja i bezpieczne środowisko</li>
-        <li>➡️ Wiele botów takich jak PluarlKit  </li>
-    </ul>
+  <h2 class="section-title">🎮 Co oferujemy?</h2>
+  <ul>
+    <li>➡️ Kanały tekstowe i głosowe</li>
+    <li>➡️ System rang i boty urozmaicające zabawę</li>
+    <li>➡️ Miejsce na dzielenie się sztuką, muzyką i memami</li>
+    <li>➡️ Przyjazna moderacja i bezpieczne środowisko</li>
+    <li>➡️ Wiele botów takich jak PluralKit</li>
+  </ul>
 </section>
 
 <section id="dolacz">
-    <h2 class="section-title">💬 Dołącz do nas!</h2>
-    <p>
-        Kliknij poniższy przycisk, aby dołączyć do naszej lisiej społeczności. Czekamy na Ciebie! 🦊
-    </p>
-    <p>
-        <a href="https://discord.gg/kN8TYePTB5" class="btn">Dołącz do Lisi Chaty</a>
-    </p>
+  <h2 class="section-title">💬 Dołącz do nas!</h2>
+  <p>
+    Kliknij poniższy przycisk, aby dołączyć do naszej lisiej społeczności. Czekamy na Ciebie! 🦊
+  </p>
+  <p>
+    <a href="https://discord.gg/kN8TYePTB5" class="btn">Dołącz do Lisi Chaty</a>
+  </p>
 </section>
 
 <footer>
-    &copy; 2025 Lisia Chata – Wszelkie prawa zastrzeżone
+  &copy; 2025 Lisia Chata – Wszelkie prawa zastrzeżone
 </footer>
 
 <script>
-    function openSidebar() {
-        document.getElementById("sidebar").style.width = "250px";
-    }
+  function openSidebar() {
+    document.getElementById("sidebar").style.width = "250px";
+  }
 
-    function closeSidebar() {
-        document.getElementById("sidebar").style.width = "0";
-    }
+  function closeSidebar() {
+    document.getElementById("sidebar").style.width = "0";
+  }
 </script>
 
 </body>
 </html>
+
