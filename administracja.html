@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisia Chata – Administracja</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+            background: #fff8f0;
+            color: #333;
+        }
+
+        #sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #ff7f50;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        #sidebar a {
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #sidebar a:hover {
+            background-color: #e66a3a;
+        }
+
+        #sidebarCloseBtn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        #openSidebarBtn {
+            font-size: 1.5em;
+            background: #ff7f50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            border-radius: 8px;
+        }
+
+        header {
+            background: #ff7f50;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #ff7f50;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ff7f50;
+            color: white;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="openSidebarBtn" onclick="openSidebar()">☰ Menu</button>
+
+<div id="sidebar">
+    <button id="sidebarCloseBtn" onclick="closeSidebar()">&times;</button>
+    <a href="index.html">🏠 Strona główna</a>
+    <a href="#administracja">🛠️ Administracja</a>
+    <a href="index.html#dolacz">💬 Dołącz do nas!</a>
+</div>
+
+<header>
+    <h1>Lisia Chata</h1>
+    <p>Zespół administracyjny serwera 🛠️</p>
+</header>
+
+<section id="administracja">
+    <h2 class="section-title">🛠️ Administracja</h2>
+    <p>
+        Nasz zespół administracyjny czuwa nad tym, by Lisia Chata była przyjaznym i bezpiecznym miejscem dla wszystkich użytkowników. Oto osoby, które tworzą ten serwer:
+    </p>
+    <ul>
+        <li><strong>🦊 Właściciele - stefania4329 , papiczak</strong> – właściciele i twórcy Lisiej Chaty</li>
+        <li><strong>🛡️ Moderator - etitny303 , d.y.v_o</strong> – zespół moderatorów pilnujących porządku</li>
+    </ul>
+</section>
+
+<footer>
+    &copy; 2025 Lisia Chata – Administracja
+</footer>
+
+<script>
+    function openSidebar() {
+        document.getElementById("sidebar").style.width = "250px";
+    }
+
+    function closeSidebar() {
+        document.getElementById("sidebar").style.width = "0";
+    }
+</script>
+
+</body>
+</html>
 
