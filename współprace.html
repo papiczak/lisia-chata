@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Współprace – Lisia Chata</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="fox_icon_64x64.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: #fffaf5;
+      color: #333;
+    }
+
+    /* Pasek boczny */
+    #sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, #ff7f50, #ff9966);
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #sidebar a {
+      padding: 14px 30px;
+      text-decoration: none;
+      font-size: 1.2em;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    #sidebar a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    #sidebarCloseBtn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    #openSidebarBtn {
+      font-size: 1.5em;
+      background: #ff7f50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff7f50, #ff9966);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 2em;
+      color: #ff7f50;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .server-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .server {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 30px;
+      text-align: center;
+    }
+
+    .server h3 {
+      margin-top: 0;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff7f50, #ff9966);
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background: #e66a3a;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #ff7f50;
+      color: white;
+      margin-top: 60px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Przycisk otwierania menu -->
+<button id="openSidebarBtn" onclick="openSidebar()">☰ Menu</button>
+
+<!-- Pasek boczny -->
+<div id="sidebar">
+  <button id="sidebarCloseBtn" onclick="closeSidebar()">&times;</button>
+  <a href="index.html">🏠 Powrót do strony głównej</a>
+  <a href="administracja.html">🛠️ Administracja</a>
+  <a href="wspolprace.html">🤝 Współprace</a>
+</div>
+
+<header>
+  <h1>🤝 Współprace</h1>
+  <p>Poznaj zaprzyjaźnione serwery naszej społeczności!</p>
+</header>
+
+<div class="container">
+  <h2 class="section-title">Nasze partnerskie serwery</h2>
+  <div class="server-grid">
+    <div class="server">
+      <h3>💮~`| 𝑵𝒐𝒓𝒕𝒉💨𝒘𝒊𝒏𝒅 - 𝒑𝒐𝒛𝒏𝒂𝒋𝒎𝒚 𝒔𝒊𝒆 |`~💮</h3>
+      <p>💨|`~ Witaj, podróżniku! Szukasz serwera, na którym poznasz przyjaciół, znajomych, a może nawet bratnią duszę? Trafiłeś idealnie — jesteś u nas mile widziany! Oferujemy:
+
+🫧 Miłą atmosferę — zero agresji! Czasem można się podroczyć, ale zawsze z wyczuciem, by nie zranić nikogo po drugiej stronie ekranu. 🫧
+
+🌊 Ogarniętą administrację — jesteśmy dostępni, by pomóc w każdej chwili! Mamy autorole, poziomy oraz kanały, na których możecie swobodnie poznawać innych. 🌊
+
+💧 Estetyczny wygląd serwera i dobrze zorganizowane kanały. 💧
+
+💙 Kącik, w którym możesz poznać bratnią duszę, a także miejsce dla miłości. 💙
+
+Zapraszamy serdecznie wszystkich! Mamy nadzieję, że będziecie się u nas świetnie bawić. Jesteśmy również otwarci na Wasze propozycje — śmiało piszcie! ~`|💨</p>
+      <a href="https://discord.gg/Wa8sMJAK75" class="btn">Dołącz</a>
+    </div>
+    <div class="server">
+      <h3>Alter-Forest</h3>
+      <p>🐾 Hejka szukasz serwera alter-human, system albo therian to trafiłeś idealnie🐾 <br>
+**Co znajdziesz na serwerze?** <br>
+🫀- miłą i pomocną administrację <br>
+✨-Rozbudowane kanały i rolę <br>
+🏳️‍🌈-jesteśmy przyjaźni dla LGBT i LGBT+ <br>
+🪷-Estetyczny serwer <br>
+🌀-dużo kanałów na bardzo różne tematy na pewno znajdziesz coś dla siebie <br>
+👾-Nasz serwer posiada również pluralkit i Tupperbox <br>
+🌹Mamy nadzieję że dołączysz🌹 <br>
+
+
+🪴Nie musisz być Alter human by dołączyć na serwer każdy jest mile widziany🪴
+
+</p>
+      <a href="https://discord.gg/9S8V7QVmbA" class="btn">Dołącz</a>
+    </div>
+    <div class="server">
+      <h3>☽━━༺Księżycowy zamek༻━━☾</h3>
+      <p>w przyszłości</p>
+      <a href="https://discord.gg/rAmDzrvGBP" class="btn">Dołącz</a>
+    </div>
+    <div class="server">
+      <h3>📚 soon</h3>
+      <p>soon.</p>
+      <a href="soon" class="btn">Dołącz</a>
+    </div>
+    <div class="server">
+      <h3>🧸 soon</h3>
+      <p>soon.</p>
+      <a href="soon" class="btn">Dołącz</a>
+    </div>
+    <div class="server">
+      <h3>🚀 soon</h3>
+      <p>soon</p>
+      <a href="soon" class="btn">Dołącz</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Lisia Chata – Wszelkie prawa zastrzeżone
+</footer>
+
+<script>
+  function openSidebar() {
+    document.getElementById("sidebar").style.width = "250px";
+  }
+
+  function closeSidebar() {
+    document.getElementById("sidebar").style.width = "0";
+  }
+</script>
+
+</body>
+</html>
