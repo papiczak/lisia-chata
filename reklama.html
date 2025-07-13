@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dołącz do Lisiej Chaty!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="fox_icon_64x64.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: #fffaf5;
+      color: #333;
+    }
+
+    /* Pasek boczny */
+    #sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, #ff7f50, #ff9966);
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #sidebar a {
+      padding: 14px 30px;
+      text-decoration: none;
+      font-size: 1.2em;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    #sidebar a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    #sidebarCloseBtn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    #openSidebarBtn {
+      font-size: 1.5em;
+      background: #ff7f50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff7f50, #ff9966);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3.2em;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-title {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #ff7f50;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff7f50, #ff9966);
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:hover {
+      background: #e66a3a;
+      transform: translateY(-2px);
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 700px;
+      margin: 30px auto;
+      display: block;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #ff7f50;
+      color: white;
+      margin-top: 60px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Przycisk otwierający menu boczne -->
+<button id="openSidebarBtn" onclick="openSidebar()">☰ Menu</button>
+
+<!-- Pasek boczny -->
+<div id="sidebar">
+  <button id="sidebarCloseBtn" onclick="closeSidebar()">&times;</button>
+  <a href="index.html">🏠 Strona główna</a>
+  <a href="administracja.html">🛠️ Administracja</a>
+  <a href="współprace.html">🎮 Współprace</a>
+</div>
+
+<header>
+  <h1>Dołącz do Lisiej Chaty!</h1>
+  <p>Najcieplejszy serwer Discord w polskim internecie 🦊</p>
+</header>
+
+<section>
+  <h2 class="section-title">✨ Dlaczego warto?</h2>
+  <p>Lisia Chata to nie tylko serwer — to miejsce, gdzie tworzymy przyjazną społeczność otwartą na nowe osoby, dyskusje i wspólne spędzanie czasu.</p>
+
+  <ul>
+    <li>💬 Aktywne rozmowy tekstowe i głosowe</li>
+    <li>🎨 Kanały tematyczne: od sztuki po gry</li>
+    <li>🔒 Bezpieczne i przyjazne środowisko</li>
+    <li>🤖 Wsparcie botów (PluralKit, MEE6 i inne)</li>
+    <li>🏅 System rang i wydarzeń</li>
+  </ul>
+
+  <img src="lisa_banner.jpg" alt="Baner Lisiej Chaty" class="hero-image" />
+
+  <p style="text-align: center; margin-top: 30px;">
+    <a href="https://discord.gg/kN8TYePTB5" class="btn">🦊 Dołącz teraz!</a>
+  </p>
+</section>
+
+<footer>
+  &copy; 2025 Lisia Chata – Stwórz z nami coś wyjątkowego!
+</footer>
+
+<!-- Skrypt do obsługi menu -->
+<script>
+  function openSidebar() {
+    document.getElementById("sidebar").style.width = "250px";
+  }
+
+  function closeSidebar() {
+    document.getElementById("sidebar").style.width = "0";
+  }
+</script>
+
+</body>
+</html>
