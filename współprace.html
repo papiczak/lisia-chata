@@ -117,6 +117,11 @@
       color: #333;
     }
 
+    .server ul {
+      text-align: left;
+      padding-left: 20px;
+    }
+
     .btn {
       display: inline-block;
       background: linear-gradient(90deg, #ff7f50, #ff9966);
@@ -149,11 +154,11 @@
 <body>
 
 <!-- Przycisk otwierania menu -->
-<button id="openSidebarBtn" onclick="openSidebar()">☰ Menu</button>
+<button id="openSidebarBtn" onclick="openSidebar()" aria-label="Otwórz menu">☰ Menu</button>
 
 <!-- Pasek boczny -->
 <div id="sidebar">
-  <button id="sidebarCloseBtn" onclick="closeSidebar()">&times;</button>
+  <button id="sidebarCloseBtn" onclick="closeSidebar()" aria-label="Zamknij menu">&times;</button>
   <a href="index.html">🏠 Powrót do strony głównej</a>
   <a href="administracja.html">🛠️ Administracja</a>
   <a href="reklama.html">🤝 Reklama</a>
@@ -167,39 +172,56 @@
 <div class="container">
   <h2 class="section-title">Nasze partnerskie serwery</h2>
   <div class="server-grid">
+
     <div class="server">
-      <h3>💮~`| 𝑵𝒐𝒓𝒕𝒉💨𝒘𝒊𝒏𝒅 - 𝒑𝒐𝒛𝒏𝒂𝒋𝒎𝒚 𝒔𝒊𝒆 |`~💮</h3>
-      <p>💨|`~ Witaj, podróżniku! Szukasz serwera, na którym poznasz przyjaciół, znajomych, a może nawet bratnią duszę? Trafiłeś idealnie — jesteś u nas mile widziany! Oferujemy:
-
-🫧 Miłą atmosferę — zero agresji! Czasem można się podroczyć, ale zawsze z wyczuciem, by nie zranić nikogo po drugiej stronie ekranu. 🫧
-
-🌊 Ogarniętą administrację — jesteśmy dostępni, by pomóc w każdej chwili! Mamy autorole, poziomy oraz kanały, na których możecie swobodnie poznawać innych. 🌊
-
-💧 Estetyczny wygląd serwera i dobrze zorganizowane kanały. 💧
-
-💙 Kącik, w którym możesz poznać bratnią duszę, a także miejsce dla miłości. 💙
-
-Zapraszamy serdecznie wszystkich! Mamy nadzieję, że będziecie się u nas świetnie bawić. Jesteśmy również otwarci na Wasze propozycje — śmiało piszcie! ~`|💨</p>
+      <h3>💮~`| Northwind – poznajmy się |`~💮</h3>
+      <p>💨 Witaj, podróżniku! Szukasz serwera, na którym poznasz przyjaciół, znajomych, a może bratnią duszę? Trafiłeś idealnie! Oferujemy:</p>
+      <ul>
+        <li>🫧 Miłą atmosferę – bez agresji</li>
+        <li>🌊 Ogarniętą administrację</li>
+        <li>💧 Estetyczny wygląd serwera</li>
+        <li>💙 Kącik miłości i poznawania bratnich dusz</li>
+      </ul>
       <a href="https://discord.gg/Wa8sMJAK75" class="btn">Dołącz</a>
     </div>
+
     <div class="server">
       <h3>Alter-Forest</h3>
-      <p>🐾 Hejka szukasz serwera alter-human, system albo therian to trafiłeś idealnie🐾 <br>
-**Co znajdziesz na serwerze?** <br>
-🫀- miłą i pomocną administrację <br>
-✨-Rozbudowane kanały i rolę <br>
-🏳️‍🌈-jesteśmy przyjaźni dla LGBT i LGBT+ <br>
-🪷-Estetyczny serwer <br>
-🌀-dużo kanałów na bardzo różne tematy na pewno znajdziesz coś dla siebie <br>
-👾-Nasz serwer posiada również pluralkit i Tupperbox <br>
-🌹Mamy nadzieję że dołączysz🌹 <br>
-
-
-🪴Nie musisz być Alter human by dołączyć na serwer każdy jest mile widziany🪴
-
-</p>
+      <p>🐾 Szukasz serwera alter-human, system, therian? Trafiłeś idealnie!</p>
+      <ul>
+        <li>🫀 Miła i pomocna administracja</li>
+        <li>✨ Rozbudowane kanały i role</li>
+        <li>🏳️‍🌈 Przyjazność dla społeczności LGBT+</li>
+        <li>🌀 PluralKit i Tupperbox</li>
+        <li>🪴 Nie musisz być alter-human – każdy mile widziany!</li>
+      </ul>
       <a href="https://discord.gg/9S8V7QVmbA" class="btn">Dołącz</a>
     </div>
+
+    <!-- Nowe pola partnerów -->
+    <div class="server">
+      <h3>🤝 Partner 3</h3>
+      <p>Wkrótce...</p>
+    </div>
+
+    <div class="server">
+      <h3>🤝 Partner 4</h3>
+      <p>Wkrótce...</p>
+    </div>
+
+    <div class="server">
+      <h3>🤝 Partner 5</h3>
+      <p>Wkrótce...</p>
+    </div>
+
+    <div class="server">
+      <h3>🤝 Partner 6</h3>
+      <p>Wkrótce...</p>
+    </div>
+
+  </div>
+</div>
+
 <footer>
   &copy; 2025 Lisia Chata – Wszelkie prawa zastrzeżone
 </footer>
